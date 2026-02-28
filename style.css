@@ -14,28 +14,6 @@ width:100%;
     padding:10px 25px;
     background:white;
 }
-.left-nav{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.menu-icon{
-font-size:26px;
-cursor:pointer;
-margin-top:3px;
-}
-.left-nav{
-display:flex;
-align-items:center;
-}
-
-.menu-icon{
-font-size:26px;
-margin-right:8px;
-cursor:pointer;
-line-height:65px;
-}
 /* Logo */
 .logo{
     height:55px;   /* ⭐ Medium Perfect Size */
