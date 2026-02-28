@@ -1,74 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boost Toppers</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f5f6fa;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:white;
+}
+
+.navbar img{
+  height:40px;
+}
+
+.login-btn{
+  background:#6c5ce7;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:6px;
+}
+
+.hero{
+  background:linear-gradient(to right,#1e3c72,#2a5298);
+  color:white;
+  padding:40px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:32px;
+  margin:10px 0;
+}
+
+.hero p{
+  font-size:16px;
+  margin-bottom:20px;
+}
+
+.hero button{
+  background:white;
+  color:#2a5298;
+  border:none;
+  padding:12px 25px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.profile{
+  margin-top:30px;
+}
+
+.profile img{
+  width:150px;
+  border-radius:50%;
+  border:5px solid white;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header>
-<div class="logo">BT</div>
-
-<nav>
-<button class="login-btn">Login/Register</button>
-</nav>
-</header>
-
-
-<!-- HERO SECTION -->
-<section class="hero">
-
-<div class="hero-text">
-<h3>Achieve Your JEE Aim With Us!</h3>
-
-<h1>JEE BATCHES</h1>
-
-<p>For Class 11th, 12th, JEE & Droppers</p>
-
-<button class="explore">Explore Batches</button>
+<div class="navbar">
+  <img src="Picsart_25-11-03_02-25-53-070.png">
+  <button class="login-btn">Login/Register</button>
 </div>
 
-<div class="hero-img">
-<img src="https://i.imgur.com/4AiXzf8.png">
+<div class="hero">
+  <h1>JEE / NEET Batches</h1>
+  <p>For Class 11th, 12th & Droppers</p>
+  <button>Explore Batches</button>
+
+  <div class="profile">
+    <!-- Yahan apni photo ka naam daalna -->
+    <img src="yourphoto.jpg">
+  </div>
 </div>
-
-</section>
-
-
-<!-- SECOND SECTION -->
-
-<section class="about">
-
-<h2>Bharat’s <span>Trusted & Affordable</span><br>
-Educational Platform</h2>
-
-<p>
-Unlock your potential by signing up with Boost Toppers —
-The most affordable learning solution
-</p>
-
-<button class="start">Get Started</button>
-
-</section>
-
-
-<!-- CHAT STYLE -->
-<section class="chat">
-
-<div class="msg1">
-Student: Sir, What is BT?
-</div>
-
-<div class="msg2">
-BT is where students learn with love and grow with guidance
-</div>
-
-</section>
-
 
 </body>
-  </html>
+</html>
