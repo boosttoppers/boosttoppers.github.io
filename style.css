@@ -6,11 +6,12 @@ padding:0;
 
 /* Navbar Design */
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 25px;
-    background:white;
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   height:70px;
+   padding:0 25px;
+   background:white;
 }
 /* Logo */
 .logo{
