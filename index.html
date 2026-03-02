@@ -1,147 +1,281 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boost Toppers</title>
 
 <style>
+
+/* ===== BODY ===== */
 body{
 margin:0;
 font-family:Arial;
+background:#f5f6fa;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px;
+padding:10px 15px;
 background:white;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
 .left-nav{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 }
 
 .menu-icon{
-font-size:26px;
+font-size:28px;
+cursor:pointer;
 }
 
 .logo{
-height:40px;
+height:55px;
 }
 
 .login-btn{
 background:#6c5ce7;
 color:white;
 border:none;
-padding:8px 15px;
+padding:8px 16px;
 border-radius:6px;
 }
 
-/* BANNER */
+/* ===== BANNER ===== */
 .banner{
 width:100%;
 display:block;
 }
 
-/* HERO */
-.hero{
-background:#2a5298;
-color:white;
+/* ===== PLATFORM SECTION ===== */
+.platform{
 text-align:center;
-padding:40px 20px;
+padding:35px 20px;
+background:linear-gradient(120deg,#eef1ff,#ffffff);
 }
+
+.platform h2{
+font-size:22px;
+}
+
+.platform span{
+color:#6c5ce7;
+}
+
+.start-btn{
+background:#6c5ce7;
+color:white;
+border:none;
+padding:12px 30px;
+border-radius:8px;
+margin-top:15px;
+}
+
+/* CHAT */
+.chat-area{
+margin-top:25px;
+}
+
+.chat{
+display:inline-block;
+padding:10px 15px;
+border-radius:15px;
+margin:8px;
+max-width:80%;
+}
+
+.left{
+background:#eee;
+}
+
+.right{
+background:#2d2dff;
+color:white;
+}
+
+/* ===== FEATURES ===== */
+.features{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:20px;
+}
+
+.feature-box{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ===== CATEGORY ===== */
+.categories{
+padding:20px;
+}
+
+.categories h2{
+text-align:center;
+}
+
+.category-card{
+background:white;
+padding:18px;
+margin:15px 0;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.category-card button{
+background:#eee;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+}
+
+/* ===== FLOAT CALL BUTTON ===== */
+.call-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#6c5ce7;
+color:white;
+font-size:22px;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <div class="navbar">
+
 <div class="left-nav">
-<div class="menu-icon" onclick="openMenu()">☰</div>
+<div class="menu-icon">☰</div>
 <img src="logo.png" class="logo">
 </div>
+
 <button class="login-btn">Login/Register</button>
+
 </div>
-  <img src="1000078609.png" class="banner">
-<!-- TRUST SECTION -->
-<div class="trust">
-<h2>Bharat’s <span>Trusted & Affordable</span><br>Educational Platform</h2>
-<p>Unlock your potential by signing up with Boost Toppers learning platform</p>
+
+<!-- ===== BANNER ===== -->
+<img src="banner.png" class="banner">
+
+
+<!-- ===== PLATFORM ===== -->
+<section class="platform">
+
+<h2>
+Bharat’s <span>Trusted & Affordable</span><br>
+Educational Platform
+</h2>
+
+<p>
+Start your JEE & NEET preparation with Boost Toppers
+and achieve your dream rank with expert guidance.
+</p>
 
 <button class="start-btn">Get Started</button>
+
+<div class="chat-area">
+
+<div class="chat left">
+Vikas Bhaiya, can I crack JEE from here?
 </div>
 
+<div class="chat right">
+Yes! Boost Toppers provides smart learning,
+daily practice and personal mentorship.
+</div>
 
-<!-- FEATURES -->
-<div class="features">
+</div>
 
-<div class="card">
-<h3>📺 Daily Live</h3>
+</section>
+
+
+<!-- ===== FEATURES ===== -->
+<section class="features">
+
+<div class="feature-box">
+📺
+<h3>Daily Live</h3>
 <p>Interactive Classes</p>
 </div>
 
-<div class="card">
-<h3>📚 10 Million+</h3>
+<div class="feature-box">
+📚
+<h3>10 Million+</h3>
 <p>Tests & Notes</p>
 </div>
 
-<div class="card">
-<h3>⏰ 24 x 7</h3>
+<div class="feature-box">
+⏰
+<h3>24 x 7</h3>
 <p>Doubt Solving</p>
 </div>
 
-<div class="card">
-<h3>🏫 100+</h3>
+<div class="feature-box">
+🏫
+<h3>100+</h3>
 <p>Offline Centres</p>
 </div>
 
-</div>
+</section>
 
 
-<!-- EXAM CATEGORY -->
-<div class="exam-section">
+<!-- ===== EXAM CATEGORY ===== -->
+<section class="categories">
 
 <h2>Exam Categories</h2>
 
-<div class="exam-box">
+<div class="category-card">
 <h3>NEET</h3>
-<button>Explore Category →</button>
+<button>Explore →</button>
 </div>
 
-<div class="exam-box">
+<div class="category-card">
 <h3>IIT JEE</h3>
-<button>Explore Category →</button>
+<button>Explore →</button>
 </div>
 
-<div class="exam-box">
+<div class="category-card">
 <h3>Pre Foundation</h3>
-<button>Explore Category →</button>
+<button>Explore →</button>
 </div>
 
-<div class="exam-box">
+<div class="category-card">
 <h3>School Boards</h3>
-<button>Explore Category →</button>
+<button>Explore →</button>
 </div>
 
-<div class="exam-box">
+<div class="category-card">
 <h3>UPSC</h3>
-<button>Explore Category →</button>
+<button>Explore →</button>
 </div>
 
-<div class="exam-box">
-<h3>Govt Job Exams</h3>
-<button>Explore Category →</button>
-</div>
+</section>
 
-</div>
-<div class="hero">
-<h1>JEE / NEET Batches</h1>
-<p>For Class 11th, 12th & Droppers</p>
-</div>
+
+<!-- FLOAT BUTTON -->
+<div class="call-btn">📞</div>
 
 </body>
 </html>
