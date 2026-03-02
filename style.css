@@ -5,16 +5,18 @@ padding:0;
 font-family:Arial, sans-serif;
 background:#f5f6fa;
 }
-
-/* ===== NAVBAR ===== */
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-height:70px;
-padding:0 15px;
+padding:10px 15px;
 background:white;
 box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.logo{
+height:70px;
+width:auto;
+object-fit:contain;
 }
 
 /* LEFT SIDE MENU + LOGO */
