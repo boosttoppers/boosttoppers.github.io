@@ -1,28 +1,71 @@
+/* ===== BODY ===== */
 body{
 margin:0;
 padding:0;
+font-family:Arial, sans-serif;
+background:#f5f6fa;
 }
 
-
-/* Navbar Design */
+/* ===== NAVBAR ===== */
 .navbar{
-   display:flex;
-   justify-content:space-between;
-   align-items:center;
-   height:70px;
-   padding:0 25px;
-   background:white;
-}
-/* Logo */
-.logo{
-    height:55px;   /* ⭐ Medium Perfect Size */
-    width:auto;
-    object-fit:contain;
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:70px;
+padding:0 15px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Mobile View */
-@media(max-width:768px){
-    .logo{
-        height:45px;
-    }
+/* LEFT SIDE MENU + LOGO */
+.left-nav{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+/* THREE LINE MENU */
+.menu-icon{
+font-size:28px;
+cursor:pointer;
+}
+
+/*  PERFECT LOGO SIZE */
+.logo{
+height:45px;
+width:45px;
+object-fit:contain;
+}
+
+/* LOGIN BUTTON */
+.login-btn{
+background:white;
+color:black;
+border:1px solid black;
+padding:8px 16px;
+border-radius:6px;
+font-weight:bold;
+}
+
+/* ===== BANNER ===== */
+.banner{
+width:100%;
+display:block;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+background:#2a5298;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+.hero h1{
+margin:10px 0;
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
 }
