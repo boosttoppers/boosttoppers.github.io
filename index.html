@@ -1,109 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boost Toppers</title>
 
 <style>
+
 body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f5f6fa;
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f6fa;
 }
-<body>
 
-<div class="navbar">
-   <div class="left-nav">
-      <div class="menu-icon">&#9776;</div>
-      <img src="Picsart_25-11-03_02-25-53-070.png" class="logo">
-   </div>
+/* ===== NAVBAR ===== */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 15px;
+background:white;
+}
 
-   <button class="login-btn">Login/Register</button>
-</div>
+.left-nav{
+display:flex;
+align-items:center;
+gap:10px;
+}
 
-<!-- Banner -->
-<img src="1000078609.png">
+.menu-icon{
+font-size:26px;
+cursor:pointer;
+}
 
-<div class="hero">
-   <h1>JEE / NEET Batches</h1>
-</div>
-
-</body>
+.logo{
+height:45px;
+}
 
 .login-btn{
-  background:#6c5ce7;
-  color:white;
-  border:none;
-  padding:8px 15px;
-  border-radius:6px;
+background:#6c5ce7;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:6px;
 }
 
+/* ===== BANNER ===== */
+.banner{
+width:100%;
+display:block;
+}
+
+/* ===== HERO ===== */
 .hero{
-  background:linear-gradient(to right,#1e3c72,#2a5298);
-  color:white;
-  padding:40px 20px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
+background:linear-gradient(to right,#1e3c72,#2a5298);
+color:white;
+text-align:center;
+padding:40px 20px;
 }
 
 .hero h1{
-  font-size:32px;
-  margin:10px 0;
+font-size:30px;
+margin:10px 0;
 }
 
 .hero p{
-  font-size:16px;
-  margin-bottom:20px;
+font-size:16px;
 }
 
 .hero button{
-  background:white;
-  color:#2a5298;
-  border:none;
-  padding:12px 25px;
-  border-radius:8px;
-  font-weight:bold;
+background:white;
+color:#2a5298;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+font-weight:bold;
+margin-top:15px;
 }
 
-.profile{
-  margin-top:30px;
-}
-
-.profile img{
-  width:150px;
-  border-radius:50%;
-  border:5px solid white;
-}
 </style>
 </head>
 
 <body>
-  <div class="navbar">
 
-   <div class="left-nav">
-      <div class="menu-icon">&#9776;</div>
-      <img src="Picsart_25-11-03_02-25-53-070.png" class="logo">
-   </div>
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
 
-   <button class="login-btn">Login/Register</button>
+<div class="left-nav">
+<div class="menu-icon">&#9776;</div>
+<img src="Picsart_25-11-03_02-25-53-070.png" class="logo">
+</div>
 
-  </div>
+<button class="login-btn">Login/Register</button>
 
-<!--  JEE Banner -->
-<img src="1000078609.png" style="width:100%; display:block; margin:auto; border-radius:15px;">
+</div>
 
+<!-- ===== BANNER ===== -->
+<img src="1000078609.png" class="banner">
 
+<!-- ===== HERO SECTION ===== -->
 <div class="hero">
-  <h1>JEE / NEET Batches</h1>
-  <p>For Class 11th, 12th & Droppers</p>
-  <button>Explore Batches</button>
-
-  <div class="profile">
-    <!-- Yahan apni photo ka naam daalna -->
-    <img src="yourphoto.jpg">
-  </div>
+<h1>JEE / NEET Batches</h1>
+<p>For Class 11th, 12th & Droppers</p>
+<button>Explore Batches</button>
 </div>
 
 </body>
