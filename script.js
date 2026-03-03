@@ -18,3 +18,10 @@ slides[slideIndex - 1].style.display = "block";
 
 setTimeout(showSlides, 3000);
 }
+function openLogin(){
+document.getElementById("loginPopup").style.display="flex";
+}
+
+function closeLogin(){
+document.getElementById("loginPopup").style.display="none";
+}
