@@ -1,19 +1,26 @@
-async function askAI() {
-  const question = document.getElementById("question").value;
+..... website content .....
 
-  try {
-    const response = await axios.post(
-      "https://your-backend-url.com/api/ask-ai",
-      {
-        message: question,
-        model: "gpt"
-      }
-    );
+<script>
+let slideIndex = 0;
+showSlides();
 
-    document.getElementById("answer").innerText =
-      response.data.reply;
-  } catch (error) {
-    document.getElementById("answer").innerText =
-      "Server error";
-  }
+function showSlides() {
+let slides = document.getElementsByClassName("slides");
+
+for (let i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
 }
+
+slideIndex++;
+if (slideIndex > slides.length) {
+slideIndex = 1;
+}
+
+slides[slideIndex-1].style.display = "block";
+
+setTimeout(showSlides, 3000);
+}
+</script>
+
+</body>
+</html>
