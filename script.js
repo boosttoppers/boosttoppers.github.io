@@ -4,7 +4,7 @@ showSlides();
 
 function showSlides(){
 
-let slides = document.getElementsByClassName("slide");
+let slides = document.getElementsByClassName("slides");
 let dots = document.getElementsByClassName("dot");
 
 for(let i=0;i<slides.length;i++){
@@ -27,6 +27,7 @@ dots[slideIndex-1].classList.add("active");
 
 setTimeout(showSlides,3000);
 }
+
 function openLogin(){
 document.getElementById("loginPopup").style.display="flex";
 }
