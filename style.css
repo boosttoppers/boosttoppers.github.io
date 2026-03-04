@@ -1,4 +1,19 @@
+/* ===== SLIDER ===== */
 
+.slider{
+width:100%;
+position:relative;
+overflow:hidden;
+}
+
+.slides{
+display:none;
+}
+
+.slides img{
+width:100%;
+display:block;
+}
 html, body {
     margin: 0;
     padding: 0;
