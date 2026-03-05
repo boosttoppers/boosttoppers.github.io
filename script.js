@@ -1,6 +1,8 @@
 let slideIndex = 0;
 
+window.onload = function(){
 showSlides();
+}
 
 function showSlides(){
 
