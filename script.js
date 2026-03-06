@@ -4,10 +4,11 @@ window.onload = function(){
 showSlides();
 }
 
+/* ===== BANNER SLIDER ===== */
+
 function showSlides(){
 
 let slides = document.getElementsByClassName("slides");
-let dots = document.getElementsByClassName("dot");
 
 for(let i=0;i<slides.length;i++){
 slides[i].style.display="none";
@@ -15,50 +16,17 @@ slides[i].style.display="none";
 
 slideIndex++;
 
-if(slideIndex>slides.length){
-slideIndex=1;
+if(slideIndex > slides.length){
+slideIndex = 1;
 }
 
-slides[slideIndex-1].style.display="block";
-
-for(let i=0;i<dots.length;i++){
-dots[i].classList.remove("active");
-}
-
-dots[slideIndex-1].classList.add("active");
+slides[slideIndex-1].style.display = "block";
 
 setTimeout(showSlides,3000);
 }
 
-function openLogin(){
-document.getElementById("loginPopup").style.display="flex";
-}
 
-function closeLogin(){
-document.getElementById("loginPopup").style.display="none";
-}
-let slideIndex = 0;
-showSlides();
-
-function showSlides(){
-
-let slides = document.getElementsByClassName("slides");
-let dots = document.getElementsByClassName("dot");
-
-for(let i=0;i<slides.length;i++){
-slides[i].style.display="none";
-}
-
-slideIndex++;
-
-if(slideIndex>slides.length){
-slideIndex=1;
-}
-
-slides[slideIndex-1].style.display="block";
-
-setTimeout(showSlides,3000);
-}
+/* ===== LOGIN POPUP ===== */
 
 function openLogin(){
 document.getElementById("loginPopup").style.display="flex";
