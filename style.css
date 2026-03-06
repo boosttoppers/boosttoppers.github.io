@@ -315,3 +315,21 @@ outline:none;
 .otp-box:focus{
 border-color:#6c5ce7;
 }
+/* OTP BOX STYLE */
+
+.otp-container{
+display:flex;
+justify-content:center;
+gap:10px;
+margin:20px 0;
+}
+
+.otp-box{
+width:40px !important;
+height:45px;
+text-align:center;
+font-size:18px;
+border:2px solid #ddd;
+border-radius:8px;
+flex:none;
+}
