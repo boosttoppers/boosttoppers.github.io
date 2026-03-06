@@ -178,61 +178,6 @@ border-radius:8px;
 }
 
 
-/* ===== FOOTER ===== */
-
-.footer{
-background:#111;
-color:white;
-padding:40px 20px;
-}
-
-.footer-top{
-text-align:center;
-margin-bottom:30px;
-}
-
-.footer-top h2{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.footer-top p{
-color:#ccc;
-font-size:14px;
-}
-
-.social-icons span{
-font-size:22px;
-margin:8px;
-cursor:pointer;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-margin-top:25px;
-}
-
-.footer-grid h3{
-margin-bottom:10px;
-color:#fff;
-}
-
-.footer-grid p{
-color:#bbb;
-margin:6px 0;
-font-size:14px;
-}
-
-.copyright{
-text-align:center;
-margin-top:30px;
-color:#888;
-font-size:13px;
-}
-
-
 /* ===== FLOAT CALL BUTTON ===== */
 
 .call-btn{
@@ -277,13 +222,18 @@ text-align:center;
 position:relative;
 }
 
-.login-box input{
+/* Normal input (OTP boxes excluded) */
+
+.login-box input:not(.otp-box){
 width:100%;
 padding:12px;
 margin:15px 0;
 border:1px solid #ccc;
 border-radius:6px;
 }
+
+
+/* OTP BUTTON */
 
 .otp-btn{
 background:#6c63ff;
@@ -293,7 +243,9 @@ padding:12px;
 width:100%;
 border-radius:6px;
 }
-/* OTP BOX */
+
+
+/* ===== OTP BOX SECTION ===== */
 
 .otp-container{
 display:flex;
@@ -314,22 +266,4 @@ outline:none;
 
 .otp-box:focus{
 border-color:#6c5ce7;
-}
-/* OTP BOX STYLE */
-
-.otp-container{
-display:flex;
-justify-content:center;
-gap:10px;
-margin:20px 0;
-}
-
-.otp-box{
-width:40px !important;
-height:45px;
-text-align:center;
-font-size:18px;
-border:2px solid #ddd;
-border-radius:8px;
-flex:none;
-}
+  }
