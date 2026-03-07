@@ -50,7 +50,7 @@ alert("Enter valid mobile number");
 return;
 }
 
-generatedOTP = Math.floor(1000 + Math.random()*9000);
+generatedOTP = Math.floor(100000 + Math.random() * 900000);
 
 alert("Your OTP is: " + generatedOTP);
 }
