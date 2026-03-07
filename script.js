@@ -120,3 +120,11 @@ storageBucket: "boost-toppers.firebasestorage.app",
 messagingSenderId: "258617068875",
 appId: "1:258617068875:web:XXXX"
 };
+window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+'recaptcha-container',
+{
+size: 'normal'
+}
+);
+
+recaptchaVerifier.render();
