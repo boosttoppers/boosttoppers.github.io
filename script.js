@@ -112,3 +112,11 @@ function verifyOTP() {
     });
 
 }
+var firebaseConfig = {
+apiKey: "NEW_API_KEY",
+authDomain: "boost-toppers.firebaseapp.com",
+projectId: "boost-toppers",
+storageBucket: "boost-toppers.firebasestorage.app",
+messagingSenderId: "258617068875",
+appId: "1:258617068875:web:XXXX"
+};
