@@ -1,10 +1,11 @@
+/* ===== BANNER SLIDER ===== */
+
 let slideIndex = 0;
 
 window.onload = function(){
 showSlides();
-}
-
-/* ===== BANNER SLIDER ===== */
+renderRecaptcha();
+};
 
 function showSlides(){
 
@@ -23,6 +24,7 @@ slideIndex = 1;
 slides[slideIndex-1].style.display = "block";
 
 setTimeout(showSlides,3000);
+
 }
 
 
@@ -37,9 +39,23 @@ document.getElementById("loginPopup").style.display="none";
 }
 
 
-/* ===== OTP LOGIN SYSTEM ===== */
+/* ===== FIREBASE REAL OTP SYSTEM ===== */
 
-let generatedOTP = "";
+function renderRecaptcha(){
+
+window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+'recaptcha-container',
+{
+size:'normal'
+}
+);
+
+recaptchaVerifier.render();
+
+}
+
+
+/* ===== SEND OTP ===== */
 
 function sendOTP(){
 
@@ -50,24 +66,50 @@ alert("Enter valid mobile number");
 return;
 }
 
-generatedOTP = Math.floor(100000 + Math.random() * 900000);
+let number = "+91" + mobile;
 
-alert("Your OTP is: " + generatedOTP);
+firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier)
+
+.then(function(confirmationResult){
+
+window.confirmationResult = confirmationResult;
+
+alert("OTP Sent Successfully");
+
+})
+
+.catch(function(error){
+
+alert(error.message);
+
+});
+
 }
+
+
+/* ===== VERIFY OTP ===== */
 
 function verifyOTP(){
 
-let otp = document.getElementById("otp").value;
+let code = "";
 
-if(otp == generatedOTP){
+document.querySelectorAll(".otp-box").forEach((box)=>{
+code += box.value;
+});
+
+confirmationResult.confirm(code)
+
+.then(function(){
 
 alert("Login Successful");
 closeLogin();
 
-}else{
+})
+
+.catch(function(){
 
 alert("Wrong OTP");
 
-}
+});
 
 }
