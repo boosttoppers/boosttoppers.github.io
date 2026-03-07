@@ -9,13 +9,31 @@
 
 <title>Boost Toppers</title>
 
+<meta name="description" content="Boost Toppers - India's Trusted & Advanced Learning Platform for JEE, NEET and Competitive Exam Preparation.">
+
+<meta property="og:title" content="Boost Toppers">
+<meta property="og:description" content="India’s Trusted & Advanced Learning Platform for JEE, NEET and Competitive Exams.">
+<meta property="og:url" content="https://boosttoppers.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boost Toppers">
+<meta property="og:image" content="https://boosttoppers.github.io/logo.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://boosttoppers.github.io/logo.png">
+
+<meta name="google-site-verification" content="google-abcd123456789" />
+
 <style>
+
+/* BODY */
 
 body{
 margin:0;
 font-family:Arial;
 background:#f5f6fa;
 }
+
+/* NAVBAR */
 
 .navbar{
 display:flex;
@@ -49,6 +67,8 @@ padding:8px 16px;
 border-radius:6px;
 }
 
+/* SLIDER */
+
 .slider{
 width:100%;
 overflow:hidden;
@@ -62,6 +82,8 @@ display:none;
 width:100%;
 display:block;
 }
+
+/* PLATFORM */
 
 .platform{
 text-align:center;
@@ -82,6 +104,31 @@ border-radius:8px;
 margin-top:15px;
 }
 
+/* CHAT */
+
+.chat-area{
+margin-top:25px;
+}
+
+.chat{
+display:inline-block;
+padding:10px 15px;
+border-radius:15px;
+margin:8px;
+max-width:80%;
+}
+
+.left{
+background:#eee;
+}
+
+.right{
+background:#2d2dff;
+color:white;
+}
+
+/* FEATURES */
+
 .features{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -97,8 +144,14 @@ border-radius:12px;
 box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* CATEGORY */
+
 .categories{
 padding:20px;
+}
+
+.categories h2{
+text-align:center;
 }
 
 .category-card{
@@ -111,6 +164,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 }
+
+.category-card button{
+background:#eee;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+}
+
+/* FLOAT CALL */
 
 .call-btn{
 position:fixed;
@@ -125,49 +187,6 @@ border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-}
-
-.login-popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-justify-content:center;
-align-items:center;
-}
-
-.login-box{
-background:white;
-padding:20px;
-border-radius:10px;
-text-align:center;
-width:300px;
-}
-
-.otp-container{
-display:flex;
-justify-content:center;
-gap:6px;
-margin-top:10px;
-}
-
-.otp-box{
-width:35px;
-height:40px;
-text-align:center;
-font-size:18px;
-}
-
-.otp-btn{
-background:#6c5ce7;
-color:white;
-border:none;
-padding:10px;
-margin-top:10px;
-width:100%;
 }
 
 </style>
@@ -187,6 +206,7 @@ width:100%;
 
 </div>
 
+<!-- BANNER -->
 
 <div class="slider">
 
@@ -204,6 +224,13 @@ width:100%;
 
 </div>
 
+<div style="text-align:center">
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+
+<!-- PLATFORM -->
 
 <section class="platform">
 
@@ -214,37 +241,57 @@ Learning Platform
 
 <p>
 Start your JEE & NEET preparation with Boost Toppers
+and achieve your dream rank with expert guidance.
 </p>
 
 <button class="start-btn">Get Started</button>
 
+<div class="chat-area">
+
+<div class="chat left">
+Vikas Bhaiya, can I crack JEE from here?
+</div>
+
+<div class="chat right">
+Yes! Boost Toppers provides smart learning,
+daily practice and personal mentorship.
+</div>
+
+</div>
+
 </section>
 
+<!-- FEATURES -->
 
 <section class="features">
 
 <div class="feature-box">
 📺
 <h3>Daily Live</h3>
+<p>Interactive Classes</p>
 </div>
 
 <div class="feature-box">
 📚
 <h3>10 Million+</h3>
+<p>Tests & Notes</p>
 </div>
 
 <div class="feature-box">
 ⏰
 <h3>24 x 7</h3>
+<p>Doubt Solving</p>
 </div>
 
 <div class="feature-box">
 🏫
 <h3>100+</h3>
+<p>Offline Centres</p>
 </div>
 
 </section>
 
+<!-- CATEGORY -->
 
 <section class="categories">
 
@@ -260,17 +307,32 @@ Start your JEE & NEET preparation with Boost Toppers
 <button>Explore →</button>
 </div>
 
+<div class="category-card">
+<h3>Pre Foundation</h3>
+<button>Explore →</button>
+</div>
+
+<div class="category-card">
+<h3>School Boards</h3>
+<button>Explore →</button>
+</div>
+
+<div class="category-card">
+<h3>UPSC</h3>
+<button>Explore →</button>
+</div>
+
 </section>
 
-
 <div class="call-btn">📞</div>
-
 
 <!-- LOGIN POPUP -->
 
 <div id="loginPopup" class="login-popup">
 
 <div class="login-box">
+
+<span class="close" onclick="closeLogin()">✖</span>
 
 <h2>Login to Boost Toppers</h2>
 
@@ -294,70 +356,43 @@ Start your JEE & NEET preparation with Boost Toppers
 <button class="otp-btn" onclick="verifyOTP()">Verify & Proceed</button>
 
 </div>
-</div>
 
+</div>
 
 <!-- FIREBASE -->
 
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-
 <script src="https://www.google.com/recaptcha/api.js"></script>
-
 
 <script>
 
 var firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "boost-toppers.firebaseapp.com",
-  projectId: "boost-toppers",
-  storageBucket: "boost-toppers.appspot.com",
-  messagingSenderId: "258617068875",
-  appId: "PASTE_YOUR_APP_ID"
+apiKey: "PASTE_API_KEY",
+authDomain: "boost-toppers.firebaseapp.com",
+projectId: "boost-toppers",
+storageBucket: "boost-toppers.appspot.com",
+messagingSenderId: "258617068875",
+appId: "PASTE_APP_ID"
 };
 
 firebase.initializeApp(firebaseConfig);
-
-
-window.onload = function(){
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
 'recaptcha-container'
 );
 
-recaptchaVerifier.render();
-
-}
-
-
-function openLogin(){
-document.getElementById("loginPopup").style.display="flex";
-}
-
-function closeLogin(){
-document.getElementById("loginPopup").style.display="none";
-}
-
-
 function sendOTP(){
 
-let mobile = document.getElementById("mobile").value;
+let mobile=document.getElementById("mobile").value;
 
-if(mobile.length != 10){
+let phoneNumber="+91"+mobile;
 
-alert("Enter valid mobile number");
-return;
+firebase.auth().signInWithPhoneNumber(phoneNumber,window.recaptchaVerifier)
 
-}
+.then(function(result){
 
-let phoneNumber = "+91" + mobile;
-
-firebase.auth().signInWithPhoneNumber(phoneNumber, window.recaptchaVerifier)
-
-.then(function(confirmationResult){
-
-window.confirmationResult = confirmationResult;
+window.confirmationResult=result;
 
 alert("OTP Sent Successfully");
 
@@ -370,7 +405,6 @@ alert(error.message);
 });
 
 }
-
 
 function verifyOTP(){
 
@@ -394,6 +428,14 @@ alert("Wrong OTP");
 
 });
 
+}
+
+function openLogin(){
+document.getElementById("loginPopup").style.display="flex";
+}
+
+function closeLogin(){
+document.getElementById("loginPopup").style.display="none";
 }
 
 </script>
