@@ -55,36 +55,29 @@ function renderRecaptcha() {
 
 /* ===== SEND OTP ===== */
 
-function sendOTP() {
+function sendOTP(){
 
-  let mobile = document.getElementById("mobile").value.trim();
+let mobile = "8081924678";
 
-  if (mobile.length !== 10) {
-    alert("Enter valid mobile number");
-    return;
-  }
+let number = "+91" + mobile;
 
-  let phoneNumber = "+91" + mobile;
+firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier)
 
-  firebase.auth().signInWithPhoneNumber(phoneNumber, window.recaptchaVerifier)
+.then(function(confirmationResult){
 
-    .then(function (confirmationResult) {
+window.confirmationResult = confirmationResult;
 
-      window.confirmationResult = confirmationResult;
+alert("OTP Sent Successfully");
 
-      alert("OTP Sent Successfully");
+})
 
-    })
+.catch(function(error){
 
-    .catch(function (error) {
+alert(error.message);
 
-      alert(error.message);
-
-    });
+});
 
 }
-
-
 /* ===== VERIFY OTP ===== */
 
 function verifyOTP() {
