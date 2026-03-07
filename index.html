@@ -394,7 +394,86 @@ appId: "1:258617068875:web:9d4a70c6a9b6..."
 
 firebase.initializeApp(firebaseConfig);
 </script>
+<script type="module">
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getAuth, RecaptchaVerifier, signInWithPhoneNumber } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyASYLPq_X11qRmNcJdaSEcGQ49d5vnUhlk",
+  authDomain: "boost-toppers.firebaseapp.com",
+  projectId: "boost-toppers",
+  storageBucket: "boost-toppers.firebasestorage.app",
+  messagingSenderId: "258617068875",
+  appId: "1:258617068875:web:1d7d6c89840e2cef886cce",
+  measurementId: "G-68ZVTM0DZM"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.recaptchaVerifier = new RecaptchaVerifier(
+  'recaptcha-container',
+  {
+    size: 'normal'
+  },
+  auth
+);
+
+window.sendOTP = function(){
+
+let mobile = document.getElementById("mobile").value;
+
+if(mobile.length != 10){
+alert("Enter valid mobile number");
+return;
+}
+
+let phoneNumber = "+91" + mobile;
+
+signInWithPhoneNumber(auth, phoneNumber, window.recaptchaVerifier)
+
+.then(function(confirmationResult){
+
+window.confirmationResult = confirmationResult;
+
+alert("OTP Sent Successfully");
+
+})
+
+.catch(function(error){
+
+alert(error.message);
+
+});
+
+}
+
+window.verifyOTP = function(){
+
+let code = "";
+
+document.querySelectorAll(".otp-box").forEach((box)=>{
+code += box.value;
+});
+
+confirmationResult.confirm(code)
+
+.then(function(){
+
+alert("Login Successful");
+
+})
+
+.catch(function(){
+
+alert("Wrong OTP");
+
+});
+
+}
+
+</script>
 <script src="script.js"></script>
 </body>
  </html>
