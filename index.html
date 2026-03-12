@@ -195,14 +195,45 @@ align-items:center;
 
 <body>
 
+<!-- NAVBAR -->
+
 <div class="navbar">
 
 <div class="left-nav">
-<div class="menu-icon">☰</div>
+<div class="menu-icon" onclick="openMenu()">☰</div>
 <img src="logo.png" class="logo">
 </div>
 
-<button class="login-btn" onclick="openLogin()">Login/Register</button>
+<button class="login-btn">Login/Register</button>
+
+</div>
+
+
+<!-- SIDE MENU -->
+
+<div id="sideMenu" class="side-menu">
+
+<div class="menu-header">
+<img src="logo.png" class="menu-logo">
+<span onclick="closeMenu()">✖</span>
+</div>
+
+<ul>
+
+<li>All Courses</li>
+<li>BTS Classroom</li>
+<li>BTS Test Series</li>
+<li>Class 9</li>
+<li>Class 10</li>
+<li>Class 11</li>
+<li>Class 12</li>
+<li>Upskilling</li>
+<li>BTS Store (Books)</li>
+<li>Real Test</li>
+
+</ul>
+
+<button class="menu-login">Login/Register</button>
 
 </div>
 
