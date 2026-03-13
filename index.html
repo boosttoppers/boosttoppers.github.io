@@ -374,7 +374,9 @@ and achieve your dream rank with expert guidance.
 
 <input type="text" id="mobile" placeholder="Enter Mobile Number">
 
-<button class="otp-btn">Get OTP</button>
+<button class="otp-btn" onclick="sendOTP()">Get OTP</button>
+
+<div id="recaptcha-container"></div>
 
 <div class="otp-container">
 
@@ -387,7 +389,7 @@ and achieve your dream rank with expert guidance.
 
 </div>
 
-<button class="otp-btn">Verify & Proceed</button>
+<button class="otp-btn" onclick="verifyOTP()">Verify & Proceed</button>
 
 </div>
 
@@ -412,11 +414,8 @@ document.getElementById("loginPopup").style.display="none";
 }
 
 </script>
-</script>
 
 <script src="script.js"></script>
 
-</body>
-</html>
 </body>
 </html>
