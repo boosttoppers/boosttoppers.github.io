@@ -41,12 +41,12 @@ document.getElementById("loginPopup").style.display="none";
 /* ===== FIREBASE CONFIG ===== */
 
 var firebaseConfig = {
-apiKey: "NEW_API_KEY",
+apiKey: "AIzaSyASLYpq_x11qRmNcJdaSECQ49d5vnUhlk",
 authDomain: "boost-toppers.firebaseapp.com",
 projectId: "boost-toppers",
 storageBucket: "boost-toppers.firebasestorage.app",
 messagingSenderId: "258617068875",
-appId: "1:258617068875:web:XXXX"
+appId: "1:258617068875:web:1d7dc689840e2cef886cce"
 };
 
 firebase.initializeApp(firebaseConfig);
