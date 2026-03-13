@@ -37,59 +37,56 @@ function closeLogin(){
 document.getElementById("loginPopup").style.display="none";
 }
 
-
-/* ===== FIREBASE CONFIG ===== */
+/* FIREBASE CONFIG */
 
 var firebaseConfig = {
-apiKey: "AIzaSyASLyPq_x11qRmNcJdaSECQ49d5vnUhlk
+apiKey: "AIzaSyASYLPq_X11qRmNcJdaSEcGQ49d5vnUhlk",
 authDomain: "boost-toppers.firebaseapp.com",
 projectId: "boost-toppers",
 storageBucket: "boost-toppers.firebasestorage.app",
 messagingSenderId: "258617068875",
-appId: "1:258617068875:web:1d7dc689840e2cef886cce"
+appId: "1:258617068875:web:1d7d6c89840e2cef886cce"
 };
 
 firebase.initializeApp(firebaseConfig);
 
 
-/* ===== FIREBASE RECAPTCHA ===== */
+/* RECAPTCHA */
 
-function renderRecaptcha(){
-
-if(window.recaptchaVerifier){
-window.recaptchaVerifier.clear();
-}
+window.onload = function(){
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
 "recaptcha-container",
 {
-size:"normal"
+size: "normal"
 }
 );
 
 recaptchaVerifier.render();
 
-}
+};
 
 
-/* ===== SEND OTP ===== */
+/* SEND OTP */
 
 function sendOTP(){
 
 let mobile = document.getElementById("mobile").value;
 
 if(mobile.length != 10){
+
 alert("Enter valid mobile number");
 return;
+
 }
 
 let number = "+91" + mobile;
 
 firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier)
 
-.then(function(result){
+.then(function(confirmationResult){
 
-window.confirmationResult = result;
+window.confirmationResult = confirmationResult;
 
 alert("OTP Sent Successfully");
 
@@ -104,7 +101,7 @@ alert(error.message);
 }
 
 
-/* ===== VERIFY OTP ===== */
+/* VERIFY OTP */
 
 function verifyOTP(){
 
@@ -114,18 +111,13 @@ document.querySelectorAll(".otp-box").forEach((box)=>{
 code += box.value;
 });
 
-if(code.length < 6){
-alert("Enter complete OTP");
-return;
-}
-
-window.confirmationResult.confirm(code)
+confirmationResult.confirm(code)
 
 .then(function(){
 
 alert("Login Successful");
 
-closeLogin();
+document.getElementById("loginPopup").style.display="none";
 
 })
 
@@ -136,6 +128,7 @@ alert("Wrong OTP");
 });
 
 }
+
 
 
 /* ===== SIDE MENU ===== */
