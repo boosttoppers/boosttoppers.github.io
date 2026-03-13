@@ -41,7 +41,7 @@ document.getElementById("loginPopup").style.display="none";
 /* ===== FIREBASE CONFIG ===== */
 
 var firebaseConfig = {
-apiKey: "AIzaSyASLyPq_x11qRmNcJdaSECQ49d5vnUhlk",
+apiKey: "AIzaSyASLyPq_x11qRmNcJdaSECQ49d5vnUhlk
 authDomain: "boost-toppers.firebaseapp.com",
 projectId: "boost-toppers",
 storageBucket: "boost-toppers.firebasestorage.app",
