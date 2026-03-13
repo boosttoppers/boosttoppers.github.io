@@ -1,4 +1,4 @@
-/* ===== BODY ===== */
+/* ================= BODY ================= */
 
 body{
 margin:0;
@@ -9,7 +9,7 @@ overflow-x:hidden;
 }
 
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 
 .navbar{
 display:flex;
@@ -46,7 +46,7 @@ font-weight:bold;
 }
 
 
-/* ===== SLIDER ===== */
+/* ================= SLIDER ================= */
 
 .slider{
 width:100%;
@@ -70,7 +70,7 @@ display:block;
 }
 
 
-/* ===== FADE ANIMATION ===== */
+/* ================= FADE ANIMATION ================= */
 
 .fade{
 animation:fade 1.5s;
@@ -82,7 +82,7 @@ to{opacity:1}
 }
 
 
-/* ===== PLATFORM SECTION ===== */
+/* ================= PLATFORM SECTION ================= */
 
 .platform{
 background:linear-gradient(135deg,#eef1ff,#ffffff);
@@ -105,7 +105,7 @@ font-size:16px;
 }
 
 
-/* ===== CHAT ===== */
+/* ================= CHAT SECTION ================= */
 
 .chat-area{
 margin-top:25px;
@@ -130,7 +130,7 @@ color:white;
 }
 
 
-/* ===== FEATURES ===== */
+/* ================= FEATURES ================= */
 
 .features{
 display:grid;
@@ -148,7 +148,7 @@ box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 
-/* ===== CATEGORY ===== */
+/* ================= CATEGORY ================= */
 
 .categories{
 padding:25px;
@@ -178,7 +178,7 @@ border-radius:8px;
 }
 
 
-/* ===== FLOAT CALL BUTTON ===== */
+/* ================= FLOAT CALL BUTTON ================= */
 
 .call-btn{
 position:fixed;
@@ -197,7 +197,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 
-/* ===== LOGIN POPUP ===== */
+/* ================= LOGIN POPUP ================= */
 
 .login-popup{
 display:none;
@@ -222,7 +222,8 @@ text-align:center;
 position:relative;
 }
 
-/* Normal input (OTP boxes excluded) */
+
+/* ================= MOBILE INPUT ================= */
 
 .login-box input:not(.otp-box){
 width:100%;
@@ -233,7 +234,7 @@ border-radius:6px;
 }
 
 
-/* OTP BUTTON */
+/* ================= OTP BUTTON ================= */
 
 .otp-btn{
 background:#6c63ff;
@@ -244,7 +245,8 @@ width:100%;
 border-radius:6px;
 }
 
-/* OTP BOX SECTION */
+
+/* ================= OTP BOX ================= */
 
 .otp-container{
 display:flex;
@@ -266,7 +268,11 @@ flex:0 0 38px;
 
 .otp-box:focus{
 border-color:#6c5ce7;
-  }
+}
+
+
+/* ================= SIDE MENU ================= */
+
 .side-menu{
 position:fixed;
 top:0;
