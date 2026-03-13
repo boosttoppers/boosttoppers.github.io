@@ -56,10 +56,14 @@ firebase.initializeApp(firebaseConfig);
 
 function renderRecaptcha(){
 
+if(window.recaptchaVerifier){
+window.recaptchaVerifier.clear();
+}
+
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-'recaptcha-container',
+"recaptcha-container",
 {
-size:'normal'
+size:"normal"
 }
 );
 
@@ -83,9 +87,9 @@ let number = "+91" + mobile;
 
 firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier)
 
-.then(function(confirmationResult){
+.then(function(result){
 
-window.confirmationResult = confirmationResult;
+window.confirmationResult = result;
 
 alert("OTP Sent Successfully");
 
@@ -115,11 +119,12 @@ alert("Enter complete OTP");
 return;
 }
 
-confirmationResult.confirm(code)
+window.confirmationResult.confirm(code)
 
 .then(function(){
 
 alert("Login Successful");
+
 closeLogin();
 
 })
@@ -141,4 +146,4 @@ document.getElementById("sideMenu").style.left="0";
 
 function closeMenu(){
 document.getElementById("sideMenu").style.left="-100%";
-       }      
+}
