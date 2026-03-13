@@ -2,9 +2,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="logo.png">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Boost Toppers</title>
@@ -21,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://boosttoppers.github.io/logo.png">
 
-<meta name="google-site-verification" content="google-abcd123456789" />
+<meta name="google-site-verification" content="google-abcd123456789">
 
 <style>
 
@@ -56,7 +54,7 @@ cursor:pointer;
 }
 
 .logo{
-height:55px;
+height:50px;
 }
 
 .login-btn{
@@ -64,6 +62,52 @@ background:#6c5ce7;
 color:white;
 border:none;
 padding:8px 16px;
+border-radius:6px;
+}
+
+/* SIDE MENU */
+
+.side-menu{
+position:fixed;
+top:0;
+left:-100%;
+width:75%;
+height:100%;
+background:white;
+transition:0.4s;
+z-index:999;
+padding:20px;
+box-shadow:2px 0 10px rgba(0,0,0,0.2);
+}
+
+.side-menu ul{
+list-style:none;
+padding:0;
+}
+
+.side-menu ul li{
+padding:14px 0;
+border-bottom:1px solid #eee;
+font-size:18px;
+}
+
+.menu-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu-logo{
+height:40px;
+}
+
+.menu-login{
+width:100%;
+margin-top:20px;
+background:#6c5ce7;
+color:white;
+border:none;
+padding:12px;
 border-radius:6px;
 }
 
@@ -80,7 +124,6 @@ display:none;
 
 .slides img{
 width:100%;
-display:block;
 }
 
 /* PLATFORM */
@@ -102,29 +145,6 @@ border:none;
 padding:12px 30px;
 border-radius:8px;
 margin-top:15px;
-}
-
-/* CHAT */
-
-.chat-area{
-margin-top:25px;
-}
-
-.chat{
-display:inline-block;
-padding:10px 15px;
-border-radius:15px;
-margin:8px;
-max-width:80%;
-}
-
-.left{
-background:#eee;
-}
-
-.right{
-background:#2d2dff;
-color:white;
 }
 
 /* FEATURES */
@@ -150,10 +170,6 @@ box-shadow:0 2px 8px rgba(0,0,0,0.08);
 padding:20px;
 }
 
-.categories h2{
-text-align:center;
-}
-
 .category-card{
 background:white;
 padding:18px;
@@ -163,13 +179,6 @@ box-shadow:0 2px 8px rgba(0,0,0,0.08);
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
-
-.category-card button{
-background:#eee;
-border:none;
-padding:8px 12px;
-border-radius:6px;
 }
 
 /* FLOAT CALL */
@@ -189,6 +198,55 @@ justify-content:center;
 align-items:center;
 }
 
+/* LOGIN POPUP */
+
+.login-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.login-box{
+background:white;
+padding:25px;
+border-radius:10px;
+width:300px;
+text-align:center;
+}
+
+.login-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.otp-btn{
+background:#6c5ce7;
+color:white;
+border:none;
+padding:10px;
+width:100%;
+border-radius:6px;
+}
+
+.otp-container{
+display:flex;
+justify-content:space-between;
+}
+
+.otp-box{
+width:35px;
+height:35px;
+text-align:center;
+font-size:18px;
+}
+
 </style>
 
 </head>
@@ -204,10 +262,9 @@ align-items:center;
 <img src="logo.png" class="logo">
 </div>
 
-<button class="login-btn">Login/Register</button>
+<button class="login-btn" onclick="openLogin()">Login/Register</button>
 
 </div>
-
 
 <!-- SIDE MENU -->
 
@@ -255,12 +312,6 @@ align-items:center;
 
 </div>
 
-<div style="text-align:center">
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-</div>
-
 <!-- PLATFORM -->
 
 <section class="platform">
@@ -276,19 +327,6 @@ and achieve your dream rank with expert guidance.
 </p>
 
 <button class="start-btn">Get Started</button>
-
-<div class="chat-area">
-
-<div class="chat left">
-Vikas Bhaiya, can I crack JEE from here?
-</div>
-
-<div class="chat right">
-Yes! Boost Toppers provides smart learning,
-daily practice and personal mentorship.
-</div>
-
-</div>
 
 </section>
 
@@ -322,39 +360,6 @@ daily practice and personal mentorship.
 
 </section>
 
-<!-- CATEGORY -->
-
-<section class="categories">
-
-<h2>Exam Categories</h2>
-
-<div class="category-card">
-<h3>NEET</h3>
-<button>Explore →</button>
-</div>
-
-<div class="category-card">
-<h3>IIT JEE</h3>
-<button>Explore →</button>
-</div>
-
-<div class="category-card">
-<h3>Pre Foundation</h3>
-<button>Explore →</button>
-</div>
-
-<div class="category-card">
-<h3>School Boards</h3>
-<button>Explore →</button>
-</div>
-
-<div class="category-card">
-<h3>UPSC</h3>
-<button>Explore →</button>
-</div>
-
-</section>
-
 <div class="call-btn">📞</div>
 
 <!-- LOGIN POPUP -->
@@ -363,15 +368,13 @@ daily practice and personal mentorship.
 
 <div class="login-box">
 
-<span class="close" onclick="closeLogin()">✖</span>
+<span onclick="closeLogin()">✖</span>
 
 <h2>Login to Boost Toppers</h2>
 
 <input type="text" id="mobile" placeholder="Enter Mobile Number">
 
-<button class="otp-btn" onclick="sendOTP()">Get OTP</button>
-
-<div id="recaptcha-container"></div>
+<button class="otp-btn">Get OTP</button>
 
 <div class="otp-container">
 
@@ -384,81 +387,20 @@ daily practice and personal mentorship.
 
 </div>
 
-<button class="otp-btn" onclick="verifyOTP()">Verify & Proceed</button>
+<button class="otp-btn">Verify & Proceed</button>
 
 </div>
 
 </div>
-
-<!-- FIREBASE -->
-
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-<script src="https://www.google.com/recaptcha/api.js"></script>
 
 <script>
 
-var firebaseConfig = {
-apiKey: "PASTE_API_KEY",
-authDomain: "boost-toppers.firebaseapp.com",
-projectId: "boost-toppers",
-storageBucket: "boost-toppers.appspot.com",
-messagingSenderId: "258617068875",
-appId: "PASTE_APP_ID"
-};
-
-firebase.initializeApp(firebaseConfig);
-
-window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-'recaptcha-container'
-);
-
-function sendOTP(){
-
-let mobile=document.getElementById("mobile").value;
-
-let phoneNumber="+91"+mobile;
-
-firebase.auth().signInWithPhoneNumber(phoneNumber,window.recaptchaVerifier)
-
-.then(function(result){
-
-window.confirmationResult=result;
-
-alert("OTP Sent Successfully");
-
-})
-
-.catch(function(error){
-
-alert(error.message);
-
-});
-
+function openMenu(){
+document.getElementById("sideMenu").style.left="0";
 }
 
-function verifyOTP(){
-
-let code="";
-
-document.querySelectorAll(".otp-box").forEach((box)=>{
-code+=box.value;
-});
-
-confirmationResult.confirm(code)
-
-.then(function(){
-
-alert("Login Successful");
-
-})
-
-.catch(function(){
-
-alert("Wrong OTP");
-
-});
-
+function closeMenu(){
+document.getElementById("sideMenu").style.left="-100%";
 }
 
 function openLogin(){
