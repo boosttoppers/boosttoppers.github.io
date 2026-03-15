@@ -377,3 +377,10 @@ font-size:14px;
 .social-icons a{
 margin-right:12px;
 }
+.social-icons img{
+transition:0.3s;
+}
+
+.social-icons img:hover{
+transform:scale(1.2);
+}
