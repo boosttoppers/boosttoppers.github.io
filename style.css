@@ -484,3 +484,15 @@ color:#aaa;
 position:relative;
 z-index:2;
 }
+body{
+margin:0;
+padding:0;
+overflow-x:hidden;
+}
+
+.ultra-footer{
+width:100%;
+margin:0;
+padding:40px 15px;
+box-sizing:border-box;
+}
