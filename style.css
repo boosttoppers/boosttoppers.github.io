@@ -515,3 +515,11 @@ max-width:35px;
 flex-shrink:0;
 display:inline-block;
 }
+.bt-icons{
+display:flex;
+justify-content:flex-start;
+align-items:center;
+gap:12px;
+margin-top:10px;
+padding-left:15px;
+}
