@@ -517,3 +517,27 @@ img{
 max-width:100%;
 height:auto;
 }
+/*=======BTS test series=======*/
+body{
+font-family:Arial;
+background:#f5f6fa;
+padding:20px;
+}
+
+.dpp-container{
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+.option{
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:8px;
+cursor:pointer;
+}
+
+.option:hover{
+background:#eee;
+}
